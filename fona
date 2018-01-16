@@ -1,0 +1,14 @@
+connect "/usr/sbin/chat -v -f /etc/chatscripts/gprs -T internet"
+/dev/ttyS1
+9600
+#noipdefault
+usepeerdns
+defaultroute
+replacedefaultroute
+persist
+noauth
+noccp
+nocrtscts
+local
+maxfail 0
+#user " "

@@ -1,0 +1,33 @@
+ABORT        BUSY
+ABORT        "NO CARRIER"
+ABORT        VOICE
+ABORT	     "NO DIALTONE"
+ABORT	     "NO DIAL TONE"
+ABORT        "NO ANSWER"
+ABORT        "DELAYED"
+ABORT        "ERROR"
+
+ABORT        "+CGATT: 0"
+
+""           AT
+TIMEOUT      60
+OK           ATH
+#OK           ATE1
+
+#OK	     AT+COPS=0
+
+#OK	     AT+CFUN=1
+
+OK           AT+CGATT=0
+OK           AT+CGATT=1
+#OK           AT+SAPBR=3,1,"Contype","GPRS"
+#OK           AT+SAPBR=3,1,"APN","internet"
+#OK           AT+SAPBR=2,1
+
+OK           AT+CGDCONT=1,"IP","\T","",0,0
+
+#OK           AT+CGACT=1,1
+
+OK           ATDT*99***1#
+TIMEOUT      30
+CONNECT      ""
